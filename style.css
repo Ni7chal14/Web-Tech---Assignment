@@ -1,0 +1,512 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #2c3e50;
+    --text-color: #f8f9fa;
+    --bg-dark-transparent: rgba(44, 62, 80, 0.7);
+    --bg-light: #f8f9fa;
+    --font-family: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #1a232f;
+    background-image: url('image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Ensures background image stays put */
+}
+
+/* --- Navigation Bar --- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+    margin-top: 2rem;
+    z-index: 1000;
+    background-color: rgba(44, 62, 80, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 50px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 400;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.cta-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+    color: var(--primary-color);
+    background-color: white;
+}
+
+/* --- Hero Section (for index.html) --- */
+.hero-section {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1549414271-2b0051e7cf23?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+}
+
+.hero-content {
+    max-width: 50%;
+    padding-bottom: 5rem;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    margin: 1.5rem 0;
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #c4c4c4;
+}
+
+.hero-buttons .start-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-right: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero-buttons .start-button:hover {
+    background-color: white;
+    color: black;
+}
+
+.hero-buttons .browse-button {
+    background-color: transparent;
+    color: var(--text-color);
+    border: 2px solid white;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.hero-buttons .browse-button:hover{
+    background-color: white;
+    border-color: white;
+    color: black;
+}
+
+/* --- Tour Form Section --- */
+.tour-form-container {
+    background-color: var(--bg-dark-transparent);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    margin-top: 110px;
+    padding: 2.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    width: 450px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tour-form-container h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+.tour-form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+    color: #ccc;
+}
+
+.form-group select,
+.form-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #444;
+    border-radius: 0.25rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.date-fields {
+    display: flex;
+    gap: 1rem;
+}
+
+.date-fields .form-group {
+    flex: 1;
+}
+
+.find-trip-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.find-trip-button:hover {
+    background-color: #0056b3;
+}
+
+/* --- Generic Page Layout (for About & Contact) --- */
+.page-header {
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: 1;
+}
+
+.page-header > * {
+    z-index: 2;
+    position: relative;
+}
+
+.page-content {
+    padding: 3rem 10%;
+    background-color: #1a232f;
+    color: #e0e0e0;
+}
+
+/* --- Contact Page Specifics --- */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 3rem 10%;
+}
+
+.contact-form-container {
+    width: 600px;
+    background-color: var(--bg-dark-transparent);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 2.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-details-container {
+    width: 400px;
+    background-color: var(--bg-dark-transparent);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 2.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-form-container h2,
+.contact-details-container h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+.contact-form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form-container input,
+.contact-form-container textarea,
+.contact-form-container select {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: var(--text-color);
+    border: 1px solid #444;
+    border-radius: 0.25rem;
+}
+
+.contact-form-container textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+.contact-form-container button {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form-container button:hover {
+    background-color: #0056b3;
+}
+
+.contact-details-container .contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.contact-details-container .contact-item i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-right: 1rem;
+}
+
+.social-icons a {
+    color: var(--text-color);
+    font-size: 2rem;
+    margin-right: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--primary-color);
+}
+
+/* --- Featured Destinations Section --- */
+.featured-destinations {
+    padding: 3rem 10%;
+    text-align: center;
+    background-color: #1a232f;
+}
+
+.featured-destinations h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.destination-card {
+    background-color: #2c3e50;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-10px);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.destination-card h3 {
+    font-size: 1.5rem;
+    margin: 1rem 1rem 0.5rem;
+}
+
+.destination-card p {
+    font-size: 1rem;
+    color: #ccc;
+    margin: 0 1rem 1.5rem;
+}
+
+/* --- Responsive Design Media Queries --- */
+
+/* Tablet and smaller laptops */
+@media (max-width: 1024px) {
+    .contact-container {
+        flex-direction: column;
+        padding: 3rem 5%;
+    }
+
+    .contact-form-container,
+    .contact-details-container {
+        width: 100%;
+    }
+
+    .hero-section {
+        padding: 0 5%;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+        width: 95%;
+        margin-top: 1rem;
+        border-radius: 15px;
+    }
+    
+    nav .logo {
+        margin-bottom: 1rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+    }
+    
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+    
+    .cta-button {
+        width: 100%;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 1rem;
+        height: auto;
+        padding-top: 8rem;
+        padding-bottom: 2rem;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        text-align: center;
+        padding-bottom: 2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hero-buttons button {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .tour-form-container {
+        width: 100%;
+        margin-top: 0;
+        padding: 1.5rem;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .contact-container {
+        padding: 3rem 1.5rem;
+    }
+
+    .featured-destinations {
+        padding: 3rem 1.5rem;
+    }
+}
